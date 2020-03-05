@@ -1,0 +1,35 @@
+.contendor_about{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #1d1d1d;
+}
+
+.contenedor_cubo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50%;
+}
+
+.contenedor_texto {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    padding: 0 10px;
+    max-width: 380px;
+    transform: translateY(-50%);
+}
+
+.contenedor_parrafo{
+    margin-top: 20px;
+}
+
+.contenedor_parrafo > p {
+    line-height: 1.5;
+}
+
+/* .icons_menu__cards.about > img {
+    filter: grayscale(0);
+} */

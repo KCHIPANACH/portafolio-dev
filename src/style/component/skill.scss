@@ -1,0 +1,27 @@
+.contenedor_tag {
+    position: absolute;
+    right: 10%;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.contenedor_skill{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #1d1d1d;
+}
+
+.contenedor_text_skill{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    padding: 0 10px;
+    max-width: 380px;
+    transform: translateY(-50%);
+}
+
+div#myCanvasContainer > canvas{
+    width: 450px;
+}

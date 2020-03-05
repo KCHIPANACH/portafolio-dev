@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700&display=swap');
+
+
+.font_ubuntu{
+    font-family: 'Ubuntu', ;
+}
+
+:root{
+    --colorYe: #e3dd63;
+}
+
+.c_yellow{
+    color: var(--colorYe);
+}
+
+.f_100{
+    font-weight: 100;
+}
+
+.f_500{
+    font-weight: 500;
+}
