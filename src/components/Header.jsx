@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import codeIcon from '../assets/code.svg';
 
-import iconHome from '../assets/house.svg';
+import iconHome from '../assets/house.svg'; 
 import iconAbout from '../assets/user.svg';
 import iconSkills from '../assets/process.svg';
 import iconProjects from '../assets/eye.svg';
@@ -43,9 +43,11 @@ const Header = () => {
                           <img className="w_100_img__cov" src={iconSkills} alt=""/>
                         </div>
                         </Link>
+                        <Link to="/projects">
                         <div className="icons_menu__cards project">
                           <img className="w_100_img__cov" src={iconProjects} alt=""/>
                         </div>
+                        </Link>
                         <div className="icons_menu__cards contact">
                           <img className="w_100_img__cov" src={iconContact} alt=""/>
                         </div>

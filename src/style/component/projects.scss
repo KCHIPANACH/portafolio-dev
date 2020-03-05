@@ -1,0 +1,72 @@
+.contenedor_projects{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #1d1d1d;
+}
+
+.cards {
+    max-width: 329px;
+    width: 274px;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms;
+    overflow: hidden;
+}
+
+.cards:hover::before{
+    background: transparent;
+}
+
+.cards:hover .button_cards{
+    display: block;
+}
+
+.cards:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 500ms;
+    background: #00000059;
+}
+
+.flex_cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor_cards {
+    position: absolute;
+    top: 0;
+    left: 60px;
+}
+
+.cards__img {
+    height: 100%;
+}
+
+.button_cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--colorYe);
+    padding: 15px 10px;
+    border-radius: 100%;
+    transform: translate(-50%, -50% );
+    display: none;
+    animation: fadeIn .2s ease-in;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

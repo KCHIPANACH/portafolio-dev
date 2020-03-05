@@ -17,6 +17,13 @@ const Skill = ()=>{
         document.getElementById('myCanvasContainer').style.display = 'none';
       }
   });
+
+  useEffect(() => { 
+
+    document.title = `KCH - MIS SKILLS`;
+
+  });
+
     return (
         <>
         <div className="contenedor_skill">

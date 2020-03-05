@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import Piramide from '../components/Piramide';
 
 import '../style/component/about.scss';
 
 const About = ()=> {
+
+    useEffect(() => { 
+
+        document.title = `KCH - UN POCO SOBRE MI`;
+    
+      });
 
     return(
     <>

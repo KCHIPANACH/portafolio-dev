@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import Perfil from '../assets/perfil.jpg'
 import JS from '../assets/js.png'
@@ -7,6 +7,13 @@ import Code from '../assets/code.png'
 import '../style/component/background.scss';
 
 const Home = ()=>{
+
+    useEffect(() => { 
+
+        document.title = `KCH - BIENVENIDO A MI PORTAFOLIO PERSONAL`;
+    
+      });
+
 
     return (
 
