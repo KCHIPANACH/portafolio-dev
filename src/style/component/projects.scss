@@ -7,14 +7,16 @@
 }
 
 .cards {
-    max-width: 329px;
-    width: 274px;
+    min-width: 315px;
+    width: 20%;
     height: 250px;
     position: relative;
     cursor: pointer;
     transition: all 500ms;
     overflow: hidden;
 }
+
+
 
 .cards:hover::before{
     background: transparent;
@@ -37,6 +39,7 @@
 
 .flex_cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 

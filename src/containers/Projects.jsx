@@ -15,6 +15,15 @@ const Projects = () => {
     useEffect(() => { 
         document.title = `KCH - MIS PROYECTOS`; 
       });
+      useEffect(()=>{
+        let menu_home = document.querySelector(".icons_menu__cards.project");
+        let menu_cards = document.querySelectorAll(".icons_menu__cards");
+        menu_cards.forEach(element=>{
+            element.classList.remove("card_menu_active");
+        });
+        
+         menu_home.classList.add("card_menu_active");
+    })
 
 
         return (

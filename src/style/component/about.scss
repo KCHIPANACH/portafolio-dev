@@ -33,3 +33,26 @@
 /* .icons_menu__cards.about > img {
     filter: grayscale(0);
 } */
+
+
+@media(max-width:992px){
+    .contenedor_texto {
+        position: absolute;
+        top: 17%;
+        left: 3%;
+        padding: 0 10px;
+        max-width: initial;
+        transform: initial;
+        right: 0;
+        z-index: 5;
+    }
+
+    .contenedor_cubo {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: initial;
+        bottom: 0;
+        z-index: 1;
+    }
+}
