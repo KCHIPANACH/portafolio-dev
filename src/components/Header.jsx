@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
 
@@ -9,6 +9,7 @@ import iconAbout from '../assets/user.svg';
 import iconSkills from '../assets/process.svg';
 import iconProjects from '../assets/eye.svg';
 import iconContact from '../assets/email.svg';
+import menuIcon from '../assets/list.svg';
 
 import redesTwitter from '../assets/twitter.svg';
 import redesLinkdin from '../assets/linkedin.svg';
@@ -17,6 +18,19 @@ import redesGithub from '../assets/github.svg';
 import '../style/component/header.scss';
 
 const Header = () => {
+
+    const [menuActive, setMenuActive] = useState("icons_menu");
+    const [click, setClick] = useState(0);
+
+    const toggleMenu= ()=>{
+        if(click == 0){
+            setMenuActive("icons_menu icons_active");
+            setClick(1);
+        }else{
+            setMenuActive("icons_menu");
+            setClick(0);
+        }
+    }
 
     return(
         <>
@@ -27,28 +41,28 @@ const Header = () => {
                         <img className="w_100_img__cov" src={codeIcon} alt=""/>
                         </div>
                     </div>
-                    <div className="icons_menu">
+                    <div className={menuActive}>
                         <Link to="/">
-                        <div className="icons_menu__cards home">
+                        <div className="icons_menu__cards home" onClick={toggleMenu}>
                           <img className="w_100_img__cov" src={iconHome} alt=""/>
                         </div>
                         </Link>
                         <Link to="/about">
-                        <div className="icons_menu__cards about">
+                        <div className="icons_menu__cards about" onClick={toggleMenu}>
                           <img className="w_100_img__cov" src={iconAbout} alt=""/>
                         </div>
                         </Link>
                         <Link to="/skill">
-                        <div className="icons_menu__cards skill">
+                        <div className="icons_menu__cards skill" onClick={toggleMenu}>
                           <img className="w_100_img__cov" src={iconSkills} alt=""/>
                         </div>
                         </Link>
                         <Link to="/projects">
-                        <div className="icons_menu__cards project">
+                        <div className="icons_menu__cards project" onClick={toggleMenu}>
                           <img className="w_100_img__cov" src={iconProjects} alt=""/>
                         </div>
                         </Link>
-                        <div className="icons_menu__cards contact">
+                        <div className="icons_menu__cards contact" onClick={toggleMenu}>
                           <img className="w_100_img__cov" src={iconContact} alt=""/>
                         </div>
                         
@@ -62,6 +76,12 @@ const Header = () => {
                         </div>
                         <div className="cards_icons_redes">
                             <img className="w_100_img__cov" src={redesGithub} alt=""/>
+                        </div>
+                    </div>
+
+                    <div className="menu_mob">
+                        <div className="icon_mob_menu" onClick={toggleMenu}>
+                            <img className="w_100_img__cov" src={menuIcon} alt=""/>
                         </div>
                     </div>
 

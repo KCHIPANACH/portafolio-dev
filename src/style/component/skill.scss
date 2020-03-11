@@ -25,3 +25,35 @@
 div#myCanvasContainer > canvas{
     width: 450px;
 }
+
+
+@media (max-width:991px){
+    .contenedor_tag {
+        position: initial; 
+        right: initial; 
+        transform: initial; 
+        top: initial; 
+        margin-top: 0;
+    }
+
+    .contenedor_text_skill {
+        position: relative;
+        padding: 90px 12px 0;
+        transform: initial; 
+        max-width: initial;
+        left: initial;
+        top: initial; 
+    }
+
+    .contenedor_skill{
+        height: auto;
+    }
+
+    #myCanvasContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor_texto__title > h3{
+        text-align: center;
+    }
+}

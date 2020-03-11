@@ -37,22 +37,47 @@
 
 @media(max-width:992px){
     .contenedor_texto {
-        position: absolute;
-        top: 17%;
-        left: 3%;
-        padding: 0 10px;
+        position: inherit;
+        top: initial;
+        left: initial;
+        padding: 98px 10px 30px;
         max-width: initial;
         transform: initial;
-        right: 0;
+        right: initial;
         z-index: 5;
     }
 
     .contenedor_cubo {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        position: initial;
+        top: initial;
+        transform: initial;
         right: initial;
-        bottom: 0;
+        bottom: initial;
         z-index: 1;
+    }
+    #pyramid {
+        position: initial;
+        left: inherit;
+        margin-left: 0;
+        top: initial;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-top: -13%;
+        height: initial;
+        width: initial;
+    }
+}
+
+@media(max-width:576px){
+    #pyramid {
+        position: initial;
+        left: inherit;
+        margin-left: 0;
+        top: initial;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-top: -57%;
+        height: initial;
+        width: initial;
     }
 }

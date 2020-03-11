@@ -25,12 +25,12 @@ const App = ()=>(
     <BrowserRouter>
         <Layout>        
             <Switch>
-{/*                 <Route exact path="/" component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/skill" component={Skill} />
-                <Route exact path="/projects" component={Projects} /> */}
-                <div className="contenedor">
-                     {routes.map(({ path, Component }) => (   
+                <Route exact path="/projects" component={Projects} />
+
+{/*                      {routes.map(({ path, Component }) => (   
                              <Route key={path} exact path={path}>
                                 {({ match }) => (
                                     <CSSTransition
@@ -43,9 +43,9 @@ const App = ()=>(
                                      </CSSTransition>
                               )}  
                             </Route>
-                        ))}
-                </div>
+                        ))} */}
 
+ 
             </Switch>
         </Layout>
     </BrowserRouter>

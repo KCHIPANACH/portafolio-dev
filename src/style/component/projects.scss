@@ -73,3 +73,22 @@
         opacity: 1;
     }
 }
+
+@media(max-width:992px){
+    .contenedor_cards{
+        position: initial;
+        top: 0;
+        left: initial;
+    }
+
+    .contenedor_cards {
+        position: initial;
+        top: 0;
+        left: initial;
+        margin: 82px 0;
+    }
+
+    .contenedor_projects{
+        height: auto;
+    }
+}

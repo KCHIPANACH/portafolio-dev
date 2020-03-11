@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 
-import Perfil from '../assets/perfil.jpg'
-import JS from '../assets/js.png'
-import Code from '../assets/code.png'
+import Perfil from '../assets/perfil.jpg';
+import JS from '../assets/js.png';
+import Code from '../assets/code.png';
+
 
 import '../style/component/background.scss';
 
@@ -24,12 +25,43 @@ const Home = ()=>{
          menu_home.classList.add("card_menu_active");
     })
 
+    useEffect(()=>{
+
+        let imagen_background = document.querySelectorAll(".imagen_background");
+        let cant_img = imagen_background.length;
+        let contador = 1;
+
+        setInterval(()=>{
+
+            if(contador > cant_img - 1 ){
+                contador= 0;
+            }else{
+                imagen_background.forEach((e,x,a)=>{
+                    e.classList.remove("img_active");
+                })
+                imagen_background[contador].classList.add("img_active");
+                contador++;
+                console.log(contador);
+            }
+
+        }, 4000)
+        
+
+    });
 
     return (
 
         <>
         <div className="contenedor_img_header">
-            <div className="imagen_background">
+            <div className="imagen_background img_active img_lima">
+            </div>
+
+            <div className="imagen_background img_machu">
+            </div>
+
+            <div className="imagen_background img_franja">
+            </div>
+
                 <div className="contenedor_foto">
 
                     <div className="cuadro_nombre">
@@ -50,8 +82,7 @@ const Home = ()=>{
                             <p className="m_0 f_h3 t_center">Engineer | Full-Stack Developer | Learn IA </p>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>            
         </div> 
         </>
 

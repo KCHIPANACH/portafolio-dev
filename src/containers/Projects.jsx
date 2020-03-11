@@ -1,5 +1,7 @@
 import React,{useEffect} from 'react';
 
+import CardsProject from '../components/Projects/CardsProject';
+
 import Autoland from '../assets/autoland.jpeg';
 import Algoritmo from '../assets/algoritmo.png';
 import BTH from '../assets/bth.jpg';
@@ -14,6 +16,7 @@ const Projects = () => {
 
     useEffect(() => { 
         document.title = `KCH - MIS PROYECTOS`; 
+        console.log(Loreal)
       });
       useEffect(()=>{
         let menu_home = document.querySelector(".icons_menu__cards.project");
@@ -34,77 +37,11 @@ const Projects = () => {
 
                 <div className="contenedor_cards">
                         <div className="flex_cards">
-                            <div className="cards">
-                                <div className="cards__img">
-                                    <img className="w_100_img__cov" src={Loreal} alt=""/>
-                                </div>
-                                <div className="button_cards">
-                                    <div className="button_cards-texto">
-                                        <h3 className="m_0 f_h6 f_100 font_ubuntu t_center"> ¡Ver <br /> Proyecto! </h3>
-                                    </div>
-                                </div>
-                            </div>
-                             <div className="cards">
-                                <div className="cards__img">
-                                    <img className="w_100_img__cov" src={BTH} alt=""/>
-                                </div>
-                                <div className="button_cards">
-                                    <div className="button_cards-texto">
-                                        <h3 className="m_0 f_h6 f_100 font_ubuntu t_center"> ¡Ver <br /> Proyecto! </h3>
-                                    </div>
-                                </div>
-                            </div>                           
-                            <div className="cards">
-                                <div className="cards__img">
-                                    <img className="w_100_img__cov" src={Autoland} alt=""/>
-                                </div>
-                                <div className="button_cards">
-                                    <div className="button_cards-texto">
-                                        <h3 className="m_0 f_h6 f_100 font_ubuntu t_center"> ¡Ver <br /> Proyecto! </h3>
-                                    </div>
-                                </div>
-                            </div>
-                             <div className="cards">
-                                <div className="cards__img">
-                                    <img className="w_100_img__cov" src={Mamiscool} alt=""/>
-                                </div>
-                                <div className="button_cards">
-                                    <div className="button_cards-texto">
-                                        <h3 className="m_0 f_h6 f_100 font_ubuntu t_center"> ¡Ver <br /> Proyecto! </h3>
-                                    </div>
-                                </div>
-                            </div>  
-                            <div className="cards">
-                                <div className="cards__img">
-                                    <img className="w_100_img__cov" src={Algoritmo} alt=""/>
-                                </div>
-                                <div className="button_cards">
-                                    <div className="button_cards-texto">
-                                        <h3 className="m_0 f_h6 f_100 font_ubuntu t_center"> ¡Ver <br /> Proyecto! </h3>
-                                    </div>
-                                </div>
-                            </div>
-                             <div className="cards">
-
-                            </div>   
-                            <div className="cards">
-
-                            </div>
-                             <div className="cards">
-
-                            </div>                           
-                            <div className="cards">
-
-                            </div>
-                             <div className="cards">
-
-                            </div>  
-                            <div className="cards">
-
-                            </div>
-                             <div className="cards">
-
-                            </div>                                                         
+                            <CardsProject imagen={Loreal}/>
+                            <CardsProject imagen={BTH}/>
+                            <CardsProject imagen={Autoland}/>
+                            <CardsProject imagen={Mamiscool}/>
+                            <CardsProject imagen={Algoritmo}/>                            
                         </div>
                 </div>
 
