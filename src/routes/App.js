@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {BrowserRouter,Switch, Route} from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group'
 
 import Layout from '../components/Layout';
 import Home from '../containers/Home';
