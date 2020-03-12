@@ -40,8 +40,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: { 
-              name: 'assets/[hash].[ext]',
-              publicPath: '/',
+              name: '/[hash].[ext]',
+              publicPath: './',
             },
           }
         ],
@@ -49,7 +49,9 @@ module.exports = {
     ],
   },
   devServer: {  
-    historyApiFallback: true,  
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true  
   },
   plugins: [
     new HtmlWebpackPlugin({

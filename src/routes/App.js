@@ -12,39 +12,14 @@ import '../style/main.scss';
 import '../style/simple.css';
 
 
-const routes = [
-    { path: '/', name: 'Home', Component: Home },
-    { path: '/about', name: 'About', Component: About },
-    { path: '/skill', name: 'Contact', Component: Skill },
-    { path: '/projects', name: 'Contact', Component: Projects },
-  ]
-  
-
 const App = ()=>(
     <BrowserRouter>
         <Layout>        
             <Switch>
+                <Route path="/about" component={About} />
+                <Route path="/skill" component={Skill} />
+                <Route path="/projects" component={Projects} />
                 <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/skill" component={Skill} />
-                <Route exact path="/projects" component={Projects} />
-
-{/*                      {routes.map(({ path, Component }) => (   
-                             <Route key={path} exact path={path}>
-                                {({ match }) => (
-                                    <CSSTransition
-                                    in={match != null}
-                                    timeout={300}
-                                    classNames="page"
-                                    unmountOnExit
-                                    >
-                                          <Component />
-                                     </CSSTransition>
-                              )}  
-                            </Route>
-                        ))} */}
-
- 
             </Switch>
         </Layout>
     </BrowserRouter>
