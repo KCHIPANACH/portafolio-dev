@@ -12,6 +12,7 @@ const Home = ()=>{
     useEffect(() => { 
 
         document.title = `KCH - BIENVENIDO A MI PORTAFOLIO PERSONAL`;
+        document.querySelector(".contenedor_footer").style.display="block";
     
       });
 
@@ -41,7 +42,6 @@ const Home = ()=>{
                 })
                 imagen_background[contador].classList.add("img_active");
                 contador++;
-                console.log(contador);
             }
 
         }, 4000)

@@ -1,22 +1,21 @@
 import React,{useEffect} from 'react';
 
+import { connect } from 'react-redux';
 import CardsProject from '../components/Projects/CardsProject';
 
-import Autoland from '../assets/autoland.jpeg';
-import Algoritmo from '../assets/algoritmo.png';
-import BTH from '../assets/bth.jpg';
-import Mamiscool from '../assets/mamiscool.png';
-import Loreal from '../assets/loreal.png';
+
 
 
 import '../style/component/projects.scss';
 
 
-const Projects = () => {
+const Projects = (props) => {
+
+    const {projects} = props;
 
     useEffect(() => { 
-        document.title = `KCH - MIS PROYECTOS`; 
-        console.log(Loreal)
+        document.title = `KCH - MIS PROYECTOS`;
+        document.querySelector(".contenedor_footer").style.display="none";
       });
       useEffect(()=>{
         let menu_home = document.querySelector(".icons_menu__cards.project");
@@ -37,12 +36,23 @@ const Projects = () => {
 
                 <div className="contenedor_cards">
                         <div className="flex_cards">
-                            <CardsProject imagen={Loreal}/>
-                            <CardsProject imagen={BTH}/>
-                            <CardsProject imagen={Autoland}/>
-                            <CardsProject imagen={Mamiscool}/>
-                            <CardsProject imagen={Algoritmo}/>                            
-                        </div>
+{/*                             {projects.length > 0 && 
+/*                                 {projects.map(item =>
+                                    <CardsProject key={item.id} {...item}/>
+                                )}  */              
+                            }
+                                {(projects.length > 0)? 
+                                <>
+                                        {projects.map(item =>
+                                        <CardsProject 
+                                            key={item.id}
+                                            {...item}
+                                            islist
+                                            /> 
+                                        )} 
+                                </>      
+                                : ""}                                
+                        </div>                       
                 </div>
 
             </div>
@@ -53,4 +63,10 @@ const Projects = () => {
 
 }
 
-export default Projects
+const mapStateToProps = state =>{
+    return {
+        projects: state.projects
+    };
+};
+
+export default connect(mapStateToProps, null)(Projects);

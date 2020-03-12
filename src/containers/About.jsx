@@ -9,6 +9,7 @@ const About = ()=> {
     useEffect(() => { 
 
         document.title = `KCH - UN POCO SOBRE MI`;
+        document.querySelector(".contenedor_footer").style.display="block";
     
       });
       

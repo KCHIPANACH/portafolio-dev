@@ -62,20 +62,23 @@ const Header = () => {
                           <img className="w_100_img__cov" src={iconProjects} alt=""/>
                         </div>
                         </Link>
-                        <div className="icons_menu__cards contact" onClick={toggleMenu}>
+{/*                         <div className="icons_menu__cards contact" onClick={toggleMenu}>
                           <img className="w_100_img__cov" src={iconContact} alt=""/>
-                        </div>
+                        </div> */}
                         
                     </div>
                     <div className="icons_redes">
                         <div className="cards_icons_redes">
-                            <img className="w_100_img__cov" src={redesTwitter} alt=""/>
+                            <a href="https://twitter.com/KCHIPANACH" target="_blank">
+                            <img className="w_100_img__cov" src={redesTwitter} alt=""/></a>
                         </div>
                         <div className="cards_icons_redes">
-                            <img className="w_100_img__cov" src={redesLinkdin} alt=""/>
+                        <a href="https://www.linkedin.com/in/kevinchipana/" target="_blank">
+                            <img className="w_100_img__cov" src={redesLinkdin} alt=""/></a>
                         </div>
                         <div className="cards_icons_redes">
-                            <img className="w_100_img__cov" src={redesGithub} alt=""/>
+                        <a href="https://github.com/KCHIPANACH/" target="_blank">
+                            <img className="w_100_img__cov" src={redesGithub} alt=""/></a>
                         </div>
                     </div>
 

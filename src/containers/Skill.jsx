@@ -21,6 +21,7 @@ const Skill = ()=>{
   useEffect(() => { 
 
     document.title = `KCH - MIS SKILLS`;
+    document.querySelector(".contenedor_footer").style.display="block";
 
   });
 
